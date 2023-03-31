@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "module": "commonjs",
+    "sourceMap": true,
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "target": "ES6",
+    "paths": {
+      "@assets/*": ["./assets/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

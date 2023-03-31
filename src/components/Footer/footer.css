@@ -1,0 +1,71 @@
+.footer-add-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.footer-add-container span {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.opening-hours-list {
+    padding: 0;
+}
+
+.opening-hours-list li {
+    color: black;
+    list-style-type: none;
+    color: #ffdd00;
+}
+
+
+.footer-container h3 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-weight: 600;
+    color: #ffdd00;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+hr {
+    width: 70%;
+}
+
+.contacts-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    width: 13em;
+    min-width: 5em;
+}
+
+.contacts-list li {
+    list-style-type: none;
+}
+
+.contacts-list ion-icon {
+    color: #ffdd00;
+}
+
+.footer-add-container span {
+    padding-left: 60px;
+}
+
+.last {
+    display: flex;
+    align-items: center;
+    margin-left: 15em;
+}
+
+.last span {
+    margin-left: 10px;
+}
+
+.last img {
+    width: 4em;
+    height: 4em;
+}
