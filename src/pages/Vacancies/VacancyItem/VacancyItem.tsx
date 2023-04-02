@@ -1,10 +1,10 @@
 import React from 'react';
 
-function VacancyItem(props: any) {
+function VacancyItem() {
     return (
-        <div>
+        <>
 
-        </div>
+        </>
     );
 }
 

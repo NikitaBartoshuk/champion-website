@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Personal(props: any) {
+function Personal() {
     return (
-        <div>
-        </div>
+        <>
+        </>
     );
 }
 
