@@ -47,9 +47,9 @@ const Header = () => {
                         <span>Since 1965, no gym has been responsible for more life-changing <br/> transformations and fitness achievements than Gold’s Gym.</span>
                         <Button title='SUBSCRIPTION' style='red-button' onClick={() => setShowPopup(!showPopup)}/>
                         <CSSTransition in={showPopup} classNames='alert' timeout={300} unmountOnExit>
-                            <div className={`abonements-popup-container`}>
+                            <div className='abonements-popup-container'>
                                 <div className='sub-header-btn'>
-                                    <button onClick={() => setShowPopup(!showPopup)} name="close-outline"></button>
+                                    <button onClick={() => setShowPopup(!showPopup)} name="close-outline">EXIT</button>
                                 </div>
                                 <div className='row'>
                                     FOR STUDENTS

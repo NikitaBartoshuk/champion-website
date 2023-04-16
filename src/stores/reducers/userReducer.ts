@@ -1,26 +1,21 @@
 
 interface IDefaultState {
-    users: any[];
-    loading: boolean;
-    error: null | string;
-}
-
-interface IAction {
-    type: string;
-    payload?: any;
+    token: string
 }
 
 
 const defaultState: IDefaultState = {
-    users: [],
-    loading: false,
-    error: null
+    token: ''
 }
 
 
-export const userReducer = (state = defaultState, action: any): IDefaultState => {
+export const userReducer = (state: any = defaultState, action: any) => {
     switch (action.type) {
-
+        case "REG_USER":
+            return {
+                ...state,
+                token: action.payload
+            }
 
 
         default:

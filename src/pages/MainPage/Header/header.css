@@ -100,16 +100,6 @@
     font-weight: 600;
 }
 
-ion-icon {
-    font-size: 30px;
-    cursor: pointer;
-}
-
-ion-icon:hover {
-    font-size: 30px;
-    color: rgba(255, 255, 0, 0.5);
-}
-
 .sub-img {
     min-height: 200px;
     min-width: 8rem;
