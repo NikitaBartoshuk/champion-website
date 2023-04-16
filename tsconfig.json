@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "module": "commonjs",
     "sourceMap": true,
     "jsx": "react",

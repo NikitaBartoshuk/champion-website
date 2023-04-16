@@ -13,7 +13,7 @@ interface CSSProperties {
 
 
 
-const RedButton: React.FC<RedButtonProps> = ({title, style, onClick}) => {
+const Button: React.FC<RedButtonProps> = ({title, style, onClick}) => {
 
     let buttonStyles: CSSProperties = {
         marginTop: '10px',
@@ -55,4 +55,4 @@ const RedButton: React.FC<RedButtonProps> = ({title, style, onClick}) => {
     );
 }
 
-export default RedButton;
+export default Button;

@@ -3,14 +3,12 @@ import Header from "./Header/Header";
 import RegisterForm from "./RegisterForm/RegisterForm";
 import Footer from "../../common/Footer/Footer";
 
-function MainPage() {
-    return (
+const MainPage = () =>
         <>
             <Header />
             <RegisterForm />
             <Footer />
         </>
-    );
-}
+
 
 export default MainPage;

@@ -15,7 +15,7 @@
     transition: all .3s ease;
 }
 
-.scrolled {
+.navbar-scrolled{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -23,7 +23,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     z-index: 10;
-    background-color: white;
+    background-color: #ffffff;
     transition: all .3s ease;
     box-shadow: 0 0 1rem 0 #444;
 }
@@ -57,7 +57,7 @@
 
 .navbar-main-menu-row a {
     text-transform: uppercase;
-    color: white;
+    color: #ffffff;
     font-size: 0.8em;
     letter-spacing: 1.5px;
     margin: 0 0.6rem;
@@ -103,7 +103,7 @@
     background-color: #fd0;
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: 2px;
-    color: black;
+    color: #000000;
 }
 
 .findagym-btn {
@@ -113,6 +113,6 @@
     text-transform: uppercase;
     padding: 0.5rem 1rem;
     margin-left: 1rem;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
 }
