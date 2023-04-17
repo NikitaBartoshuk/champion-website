@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './loginform.css'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {CSSTransition} from "react-transition-group";
 import {useDispatch, useSelector} from "react-redux";
-import {registerUser} from "../../../stores/actions/userAction";
+import {loginUser, registerUser} from "../../../stores/actions/userAction";
 
 
 
@@ -11,24 +11,28 @@ const LoginFrom = () => {
 
     const [showForm, setShowForm] = useState(false)
 
-    const handleFormSubmit = (event: any) => {
-        event.preventDefault();
-    }
-
     const dispatch = useDispatch()
 
-    const user = useSelector(state => state)
 
-    const RegUser = (email: string, password: string) => {
-        dispatch(registerUser(email, password))
-        console.log(user)
+    const handleFormSubmit = (event: any) => {
+        event.preventDefault()
+        dispatch(registerUser('user125', 'werdsf'))
     }
+
+    const handleFormLoginSubmit = (event: any) => {
+        event.preventDefault()
+        //@ts-ignore
+        dispatch(loginUser('user125', 'werdsf'))
+    }
+
+
+    const user = useSelector(state => state)
 
     return (
         <div className='register'>
             <h3>REGISTER FOR PERSONAL TRAININGS</h3>
             <div className='form-container'>
-                <form action="" className='form' onSubmit={handleFormSubmit}>
+                <form action="" className='form' onSubmit={handleFormLoginSubmit}>
                     <input type="tel" placeholder='Email'/>
                     <input className='phone-input' type="text" placeholder='Password'/>
                     <button className='submit-btn'>SUBMIT</button>
@@ -43,7 +47,7 @@ const LoginFrom = () => {
                                         <input type="email" placeholder='Email'/>
                                         <input type="password" placeholder='Password'/>
                                         <input type="password" placeholder='Confirm password'/>
-                                        <button className='register-btn' onClick={() => RegUser('lalala', 'loh')}>Sign In</button>
+                                        <button className='register-btn'>Sign In</button>
                                     </form>
                                 </div>
                             </div>

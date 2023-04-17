@@ -9,7 +9,7 @@ const defaultState: IDefaultState = {
 }
 
 
-export const userReducer = (state: any = defaultState, action: any) => {
+export const userReducer = (state: any = defaultState, action: {type: string, payload: string}) => {
     switch (action.type) {
         case "REG_USER":
             return {
