@@ -1,9 +1,10 @@
 import axios from "axios";
+import {API} from "../../constants/path";
 
 
 export const getBlogs = (): any => (dispatch: any) => {
     axios
-        .get("http://localhost:5000/api/blog")
+        .get(`${API.blog.getAll}`)
         .then(res => {
             dispatch({
                 type: "GET_BLOGS",
@@ -12,7 +13,7 @@ export const getBlogs = (): any => (dispatch: any) => {
         })
         .catch(err => {
             dispatch({
-                type: "ERROR",
+                type: "ERROR_BLOG",
                 payload: true
             })
         });

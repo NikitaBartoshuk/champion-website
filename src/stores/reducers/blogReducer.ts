@@ -5,9 +5,14 @@ interface IBlogs {
     description: string;
 }
 
-interface IBlogReducerState {blogs: any, isError: boolean}
+interface IBlogReducerState {
+    blogs: {
+        items: IBlogs[];
+        isError: boolean;
+    }
+}
 
-export const defaultState: any = {
+export const defaultState: IBlogReducerState = {
     blogs: {
         items: [],
         isError: false,
@@ -15,9 +20,9 @@ export const defaultState: any = {
 }
 
 
-export const blogReducer = (state: any = defaultState, action: any) => {
+export const blogReducer = (state: IBlogReducerState = defaultState, action: any) => {
     switch (action.type) {
-        case "GET_BLOGS":
+        case 'GET_BLOGS':
             return {
                 ...state,
                 blogs : {
@@ -26,7 +31,7 @@ export const blogReducer = (state: any = defaultState, action: any) => {
                 }
             }
 
-        case "ERROR":
+        case 'ERROR_BLOG':
             return {
                 ...state,
                 blogs : {

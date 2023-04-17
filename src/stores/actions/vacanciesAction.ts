@@ -1,19 +1,18 @@
 import axios from "axios";
 import {API} from "../../constants/path";
 
-
-export const getShops = (): any => (dispatch: any) => {
+export const getVacancies = (): any => (dispatch: any) => {
     axios
-        .get(`${API.shop.getAll}`)
+        .get(`${API.vacancies.getAll}`)
         .then(res => {
             dispatch({
-                type: "GET_SHOPS",
+                type: "GET_VACANCIES",
                 payload: res.data.rows
             });
         })
         .catch(err => {
             dispatch({
-                type: "ERROR_SHOP",
+                type: "ERROR_VACANCIES",
                 payload: true
             })
         });

@@ -5,9 +5,14 @@ interface IShops {
     description: string;
 }
 
-interface IShopReducerState {shops: any, isError: boolean}
+interface IShopReducerState {
+    shops: {
+        items: IShops[];
+        isError: boolean;
+    }
+}
 
-export const defaultState: any = {
+export const defaultState: IShopReducerState = {
     shops: {
         items: [],
         isError: false,
@@ -27,7 +32,7 @@ export const shopReducer = (state: any = defaultState, action: any) => {
                 }
             }
 
-        case "ERROR":
+        case "ERROR_SHOP":
             return {
                 ...state,
                 shops : {

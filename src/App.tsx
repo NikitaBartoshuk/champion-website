@@ -6,18 +6,18 @@ import NavBar from "./common/NavBar/NavBar";
 import Blog from "./pages/Blog/Blog";
 import Personal from "src/pages/Personal/Personal";
 import Shop from "./pages/Shop/Shop";
-import {pagesPaths} from "src/constants/path";
+import {PAGES_PATHS} from "src/constants/path";
 
 function App() {
   return (
       <div>
           <NavBar />
           <Routes>
-              <Route path={pagesPaths.mainPage} element={<MainPage />} />
-              <Route path={pagesPaths.vacancies} element={<Vacancies />} />
-              <Route path={pagesPaths.blog} element={<Blog />} />
-              <Route path={pagesPaths.personal} element={<Personal />} />
-              <Route path={pagesPaths.shop} element={<Shop />} />
+              <Route path={PAGES_PATHS.mainPage} element={<MainPage />} />
+              <Route path={PAGES_PATHS.vacancies} element={<Vacancies />} />
+              <Route path={PAGES_PATHS.blog} element={<Blog />} />
+              <Route path={PAGES_PATHS.personal} element={<Personal />} />
+              <Route path={PAGES_PATHS.shop} element={<Shop />} />
           </Routes>
       </div>
   );

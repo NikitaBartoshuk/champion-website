@@ -1,43 +1,46 @@
 import axios, {AxiosResponse} from "axios";
+import {API} from "../../constants/path";
 
 
 export const registerUser = (email: string, password: string): any => (dispatch: any) => {
     axios
-        .post("http://localhost:5000/api/user/registration", {
+        .post(`${API.user.registration}`, {
             email: email,
             password: password
         })
         .then(res => {
-            document.cookie = `token=${res.data.token}`;
+            const maxAge = "max-age=" + 2 * 24 * 60 * 60;
+            document.cookie = `token=${res.data.token}` + maxAge + ";path=/";
             dispatch({
-                type: "REG_USER",
+                type: 'REG_USER',
                 payload: res.data.token
             });
         })
         .catch(err => {
             dispatch({
-                type: "ERROR",
+                type: 'ERROR_USER',
                 payload: true
             })
         });
 };
 
-export const loginUser = (email: string, password: string) => (dispatch: any) => {
+export const loginUser = (email: string, password: string): any => (dispatch: any) => {
     axios
-        .post('http://localhost:5000/api/user/login', {
+        .post(`${API.user.login}`, {
             email: email,
             password: password
         })
         .then(res => {
-            document.cookie = `token=${res.data.token}`;
+            const maxAge = "max-age=" + 2 * 24 * 60 * 60;
+            document.cookie = `token=${res.data.token}` + maxAge + ";path=/";
             dispatch({
-                type: "LOGIN_USER",
+                type: 'LOGIN_USER',
                 payload: res.data.token
             })
         })
         .catch(err => {
             dispatch({
-                type: "ERROR",
+                type: 'ERROR_USER',
                 payload: true
             })
         })

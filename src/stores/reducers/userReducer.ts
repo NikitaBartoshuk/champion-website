@@ -1,4 +1,5 @@
 
+
 interface IDefaultState {
     token: string
 }
@@ -11,7 +12,13 @@ const defaultState: IDefaultState = {
 
 export const userReducer = (state: any = defaultState, action: {type: string, payload: string}) => {
     switch (action.type) {
-        case "REG_USER":
+        case 'REG_USER' :
+            return {
+                ...state,
+                token: action.payload
+            }
+
+        case 'LOGIN_USER':
             return {
                 ...state,
                 token: action.payload

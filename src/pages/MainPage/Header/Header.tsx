@@ -22,12 +22,12 @@ interface TrainingsProps {
 const Trainings: FC<TrainingsProps> = ({trainings}) =>
 
         <div className='sub-icons-container'>
-            { trainings.map((item) => (
-                <div className='sub-unit' key={item.price }>
+            { trainings.map(({price, training}) => (
+                <div className='sub-unit' key={price }>
                     <div className='sub-img' />
                     <div className='caption-container'>
-                        <p>{item.price}</p>
-                        <p>{item.training}</p>
+                        <p>{price}</p>
+                        <p>{training}</p>
                     </div>
                 </div>
             )) }
@@ -45,7 +45,7 @@ const Header = () => {
                     <div className='big-logo'>
                         <img src={biglogo} alt="big logo"/>
                         <span>Since 1965, no gym has been responsible for more life-changing <br/> transformations and fitness achievements than Gold’s Gym.</span>
-                        <Button title='SUBSCRIPTION' style='red-button' onClick={() => setShowPopup(!showPopup)}/>
+                        <Button title='SUBSCRIPTION' buttonStyles='header-btn' onClick={() => setShowPopup(!showPopup)}/>
                         <CSSTransition in={showPopup} classNames='alert' timeout={300} unmountOnExit>
                             <div className='abonements-popup-container'>
                                 <div className='sub-header-btn'>

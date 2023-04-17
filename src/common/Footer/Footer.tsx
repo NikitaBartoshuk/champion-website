@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './footer.css'
-import {imgPaths} from "../../constants/path";
+import {IMG_PATHS} from "../../constants/path";
 
 const hoursList = [{day: 'mo', time: 'mo: 08:00–13:00, 17:00–22:00'}, {day: 'tu', time: '08:00–13:00, 17:00–22:00'},
     {day: 'we', time: '08:00–13:00, 17:00–22:00'}, {day: 'th', time: '08:00–13:00, 17:00–22:00'},
@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-last'>
-                <img src={imgPaths.footerLogo} alt="didn't load"/>
+                <img src={IMG_PATHS.footerLogo} alt="handsome dark pumped man"/>
                 <span>2023 GOLD'S GYM</span>
             </div>
         </div>
