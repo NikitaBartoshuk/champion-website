@@ -31,6 +31,15 @@ export const blogReducer = (state: IBlogReducerState = defaultState, action: any
                 }
             }
 
+        case 'CREATE_BLOG':
+            return {
+                ...state,
+                blogs : {
+                    ...state.blogs,
+                    isError: action.payload
+                }
+            }
+
         case 'ERROR_BLOG':
             return {
                 ...state,

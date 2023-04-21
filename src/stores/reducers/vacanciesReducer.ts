@@ -32,6 +32,15 @@ export const vacanciesReducer = (state: IVacanciesReducerState = defaultState, a
                 }
             }
 
+        case 'CREATE_VACANCIE':
+            return {
+                ...state,
+                vacancies: {
+                    ...state.vacancies,
+                    items: action.payload
+                }
+            }
+
         case "ERROR_VACANCIES":
             return {
                 ...state,

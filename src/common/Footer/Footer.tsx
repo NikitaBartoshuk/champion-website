@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './footer.css'
 import {IMG_PATHS} from "../../constants/path";
+import {useDispatch} from "react-redux";
 
 const hoursList = [{day: 'mo', time: 'mo: 08:00–13:00, 17:00–22:00'}, {day: 'tu', time: '08:00–13:00, 17:00–22:00'},
     {day: 'we', time: '08:00–13:00, 17:00–22:00'}, {day: 'th', time: '08:00–13:00, 17:00–22:00'},
@@ -10,6 +11,7 @@ const contactsList = ['YT', 'IN', 'TW', 'FB']
 
 
 const Footer = () => {
+
     return (
         <div className='footer-container'>
             <h3>ADDITIONAL INFO</h3>

@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
+import './blog.css'
 import {useDispatch, useSelector} from "react-redux";
-import {getBlogs} from "../../stores/actions/blogAction";
+import {createBlog, getBlogs} from "../../stores/actions/blogAction";
 
 const Blog = () => {
 
@@ -14,10 +15,14 @@ const Blog = () => {
 
     console.log(blogs)
 
+    const createBlogs = () => {
+        dispatch(createBlog('Из функции', 'Новость'))
+    }
+
 
     return (
         <div>
-            
+            <button className='blog-btn' onClick={createBlogs}>Создать новость</button>
         </div>
     );
 };
