@@ -1,8 +1,26 @@
-import React, {useEffect} from 'react';
+import React, {FC, useEffect} from 'react';
 import NavBar from "../../common/NavBar/NavBar";
 import {useDispatch, useSelector} from "react-redux";
 import {createVacancie, getVacancies} from "../../stores/actions/vacanciesAction";
 import './vacancies.css'
+import Footer from "../../common/Footer/Footer";
+import blogImg from "../../assets/footerimage.svg";
+
+interface IVacancieItemProps {
+    title: string;
+    description: string;
+}
+
+
+const VacancieItem: FC<IVacancieItemProps> = ({title, description}) => {
+    return (
+        <div className='vacancie-item-container'>
+            <span className='vacancie-item-row'>{title}</span>
+            <img className='vacancies-item-img' src={blogImg} alt="blog image"/>
+            <p>{description}</p>
+        </div>
+    )
+}
 
 function Vacancies() {
 
@@ -22,8 +40,12 @@ function Vacancies() {
 
     return (
         <>
-            <NavBar />
-            <button className='vacancies-btn' onClick={createVacancies}>Создать вакансию</button>
+            <div className='vacancie-container'>
+                {vacancies.items.map((item: any) => {
+                    return <VacancieItem key={item.id} title={item.title} description={item.description} />
+                })}
+            </div>
+            <Footer />
         </>
     );
 }

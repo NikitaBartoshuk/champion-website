@@ -7,6 +7,7 @@ import Blog from "./pages/Blog/Blog";
 import Personal from "src/pages/Personal/Personal";
 import Shop from "./pages/Shop/Shop";
 import {PAGES_PATHS} from "src/constants/path";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path={PAGES_PATHS.blog} element={<Blog />} />
               <Route path={PAGES_PATHS.personal} element={<Personal />} />
               <Route path={PAGES_PATHS.shop} element={<Shop />} />
+              <Route path={PAGES_PATHS.adminpanel} element={<AdminPanel />} />
           </Routes>
       </div>
   );

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './navbar.css'
 import {IMG_PATHS, SHOP_PATH} from "../../constants/path";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { Link, useLocation } from 'react-router-dom'
 import {PATH} from '../../constants/path'
 import {useDispatch} from "react-redux";
+// import map from '../../assets/map.jpg'
 
 const NavBar = () => {
+
+    const [showMap, setShowMap] = useState(false)
+
+    const handleMapPopup = () => {
+        setShowMap(!showMap)
+    }
 
     const scrollPosition = useScrollPosition()
 
@@ -27,8 +34,16 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className='navbar-btns-container'>
-                <button className='shop-btn'><Link to={SHOP_PATH.link}>{SHOP_PATH.text}</Link></button>
-                <button className='findagym-btn'>Find A Gym</button>
+                <button className='shop-btn'><Link to={SHOP_PATH.link} className='shop-btn-link'>{SHOP_PATH.text}</Link></button>
+                <button className='findagym-btn' onClick={handleMapPopup}>Найти зал</button>
+                {showMap ?
+                    <div className='shop-blur'>
+                        <div className='map-container'>
+                            {/*<img className='map-img' src={map} alt="map"/>*/}
+                            <button onClick={handleMapPopup}>Назад</button>
+                        </div>
+                    </div> : null
+                }
             </div>
         </div>
     );

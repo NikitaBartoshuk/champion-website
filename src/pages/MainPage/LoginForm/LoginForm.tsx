@@ -38,17 +38,17 @@ const LoginFrom = () => {
                     <Button title='SUBMIT' buttonStyles='main-form-btn' />
                     <Button title='No account?' buttonStyles='main-form-btn' onClick={() => setShowForm(!showForm)}/>
                         <CSSTransition in={showForm} classNames='alert' timeout={300} unmountOnExit>
-                            <div className={'register-form'}>
+                            <div className='register-form'>
                                 <div className='register-form-column'>
-                                    <p>Sign In</p>
-                                    <span>Register and use personal trainings</span>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <button className='exit-form-btn' onClick={() => setShowForm(false)}>EXIT</button>
+                                    <button className='exit-form-btn' onClick={() => setShowForm(false)}>Назад</button>
+                                    <p className='register-form-column-row'>Регистрация</p>
+                                    <form className='register-form-popup' onSubmit={handleFormSubmit}>
                                         <input type="email" placeholder='Email'/>
                                         <input type="password" placeholder='Password'/>
                                         <input type="password" placeholder='Confirm password'/>
-                                        <button className='register-btn'>Sign In</button>
+                                        <button className='register-btn'>Зарегистрироваться</button>
                                     </form>
+                                    <span>РЕГИСТРИРУЙТЕСЬ И ЗАНИМАЙТЕСЬ ПЕРСОНАЛЬНО</span>
                                 </div>
                             </div>
                         </CSSTransition>

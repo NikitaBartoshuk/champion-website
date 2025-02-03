@@ -4,11 +4,11 @@ import biglogo from '../../../assets/hero.png'
 import {CSSTransition} from "react-transition-group";
 import Button from "../../../common/Button/Button";
 
-const trainingsForStudents = [{price: '22,80 BYN', training : '6 TRAININGS'}, {price: '29,60 BYN', training : '8 TRAININGS'},
-    {price: '43,20 BYN', training : '12 TRAININGS'}, {price: '56,00 BYN', training : '16 TRAININGS'}]
+const trainingsForStudents = [{price: '22,80 BYN', training : '6 ТРЕНИРОВОК'}, {price: '29,60 BYN', training : '8 ТРЕНИРОВОК'},
+    {price: '43,20 BYN', training : '12 ТРЕНИРОВОК'}, {price: '56,00 BYN', training : '16 ТРЕНИРОВОК'}]
 
-const trainingsForUsual = [{price: '27,00 BYN', training : '6 TRAININGS'}, {price: '35,20 BYN', training : '8 TRAININGS'},
-    {price: '51,60 BYN', training : '12 TRAININGS'}, {price: '67,20 BYN', training : '16 TRAININGS'}]
+const trainingsForUsual = [{price: '27,00 BYN', training : '6 ТРЕНИРОВОК'}, {price: '35,20 BYN', training : '8 ТРЕНИРОВОК'},
+    {price: '51,60 BYN', training : '12 ТРЕНИРОВОК'}, {price: '67,20 BYN', training : '16 ТРЕНИРОВОК'}]
 
 interface ITrainings {
     price: string;
@@ -44,19 +44,19 @@ const Header = () => {
                 <div className='inner-text'>
                     <div className='big-logo'>
                         <img src={biglogo} alt="big logo"/>
-                        <span>Since 1965, no gym has been responsible for more life-changing <br/> transformations and fitness achievements than Gold’s Gym.</span>
-                        <Button title='SUBSCRIPTION' buttonStyles='header-btn' onClick={() => setShowPopup(!showPopup)}/>
+                        <span>С 2002 занимаемся оздоровлением народа, трансформируем жизни,<br/> проводя высококлассные тренировки с лучшими тренерами.</span>
+                        <Button title='АБОНЕМЕНТЫ' buttonStyles='header-btn' onClick={() => setShowPopup(!showPopup)}/>
                         <CSSTransition in={showPopup} classNames='alert' timeout={300} unmountOnExit>
                             <div className='abonements-popup-container'>
                                 <div className='sub-header-btn'>
                                     <button onClick={() => setShowPopup(!showPopup)} name="close-outline">EXIT</button>
                                 </div>
                                 <div className='row'>
-                                    FOR STUDENTS
+                                    ДЛЯ СТУДЕНТОВ
                                 </div>
                                 <Trainings trainings={trainingsForStudents} />
                                 <div className='row'>
-                                    USUAL
+                                    ДЛЯ ВСЕХ
                                 </div>
                                 <Trainings trainings={trainingsForUsual} />
                             </div>

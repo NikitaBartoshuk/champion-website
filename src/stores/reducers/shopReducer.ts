@@ -3,6 +3,7 @@ interface IShops {
     id: null | string;
     title: string;
     description: string;
+    img: Blob
 }
 
 interface IShopReducerState {
@@ -29,6 +30,15 @@ export const shopReducer = (state: any = defaultState, action: any) => {
                 shops : {
                     ...state.shops,
                     items: action.payload
+                }
+            }
+
+        case 'CREATE_SHOPS':
+            return {
+                ...state,
+                shops : {
+                    ...state.shops,
+                    isError: action.payload
                 }
             }
 

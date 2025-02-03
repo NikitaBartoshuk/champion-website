@@ -14,10 +14,10 @@ const Footer = () => {
 
     return (
         <div className='footer-container'>
-            <h3>ADDITIONAL INFO</h3>
+            <h3>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
             <div className='footer-add-container'>
                 <div className='footer-opening-hours'>
-                    <h4>OPENING HOURS</h4>
+                    <h4>ВРЕМЯ РАБОТЫ</h4>
                     <ul className='footer-opening-hours-list'>
                         { hoursList.map((item, i) => (
                             <li key={i}>{item.day + ' :' + item.time}</li>
@@ -25,11 +25,11 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='footer-address'>
-                    <h4>ADDRESS</h4>
-                    <p>Kobrin, ul.Sportivnaya 50</p>
+                    <h4>АДРЕС</h4>
+                    <p>Кобрин, ул.Спортивная 50</p>
                 </div>
                 <div className='footer-contacts'>
-                    <h4>CONTACTS</h4>
+                    <h4>Контакты</h4>
                     <ul className='footer-contacts-list'>
                         { contactsList.map((item) => (
                                 <li key={item}>

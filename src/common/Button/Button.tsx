@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {FC} from 'react';
 import './button.css'
 
 interface RedButtonProps {
@@ -10,7 +10,7 @@ interface RedButtonProps {
 
 
 
-const Button: React.FC<RedButtonProps> = ({title, buttonStyles, onClick}) => {
+const Button: FC<RedButtonProps> = ({title, buttonStyles, onClick}) => {
 
     return (
         <>

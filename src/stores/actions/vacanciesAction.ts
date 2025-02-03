@@ -20,7 +20,7 @@ export const getVacancies = (): any => (dispatch: any) => {
 
 export const createVacancie = (title: string, description: string): any => (dispatch: any) => {
     axios.
-        post('http://localhost:5000/api/vacancies', {
+        post(API.vacancies.createVacancie, {
             title: title,
             description: description
     }, {

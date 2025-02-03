@@ -21,8 +21,7 @@ export const getBlogs = (): any => (dispatch: any) => {
 
 export const createBlog = (title: any, description: any): any => (dispatch: any) => {
     axios
-        .post('http://localhost:5000/api/blog',
-            {
+        .post(API.blog.createBlog, {
                 title: title,
                 description: description
             },

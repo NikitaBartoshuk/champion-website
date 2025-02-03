@@ -18,3 +18,24 @@ export const getShops = (): any => (dispatch: any) => {
             })
         });
 };
+
+export const createShops = (title: any, description: any, img: any): any => (dispatch: any) => {
+    axios
+        .post(`${API.shop.createShop}`, {
+            title: title,
+            description: description,
+            img: img
+        })
+        .then(res => {
+            dispatch({
+                type: "CREATE_SHOPS",
+                payload: res.data.rows
+            });
+        })
+        .catch(err => {
+            dispatch({
+                type: "ERROR_SHOP",
+                payload: true
+            })
+        });
+};
